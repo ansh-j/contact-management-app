@@ -1,3 +1,13 @@
+#Description
+
+This project allows to create and save contact information using Redix. The saved contacts can be edited and delelted.
+
+The chart page allows you to view the change in the number covid cases, the number of recovery cases and the number of deaths.
+ The Api used for chart page is https://disease.sh/v3/covid-19/historical/all?lastdays=all . It returns an object of obecjts containing cases, recovery and death object along with the dates.
+
+The map page allows one to study the country specific effect of covid by proving data based on individual countries.
+The Api used is https://disease.sh/v3/covid-19/countries . It returns an array of obects containing data for each nation.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
