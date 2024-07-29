@@ -9,6 +9,9 @@ import MarkerClusterGroup from 'react-leaflet-cluster'
 const Map = () => {
 
     const getData = async () => {
+
+        // Fetching Country Specific data of cases
+        // Return an array of objects
         const res = await fetch('https://disease.sh/v3/covid-19/countries');
         return res.json();
     }

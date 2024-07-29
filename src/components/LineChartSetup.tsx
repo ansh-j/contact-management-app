@@ -6,6 +6,9 @@ import LineChart from './LineChart';
 const LineChartSetup = () => {
 
     const getData = async () => {
+
+        // Fetching World wide data of Covid cases with dates
+        // Returns an object of objects
         const res = await fetch('https://disease.sh/v3/covid-19/historical/all?lastdays=all');
         return res.json();
     }

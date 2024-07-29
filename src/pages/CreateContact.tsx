@@ -11,6 +11,7 @@ const CreateContact = () => {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  
   const [contact, setContact] = useState<contactType>({
     id:uuidv4(),
     firstName: '',

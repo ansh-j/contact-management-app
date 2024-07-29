@@ -15,6 +15,7 @@ const ContactCard = ({item}:{item:contactType}) => {
         <p><span className='font-semibold'>Status</span> : {item.status}</p>
         <div className='flex flex-col gap-2 mt-2 items-center'>
         <Link to={`/editContact/${item.id}`} className='bg-emerald-100 rounded-lg w-fit px-2 py-1 hover:bg-emerald-300 '>Edit</Link>
+
         <button onClick={()=>dispatch(deleteContact(item.id))} className='bg-rose-200 rounded-lg w-fit px-2 py-1 hover:bg-rose-300'>Delete</button>
 
         </div>

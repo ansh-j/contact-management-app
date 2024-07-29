@@ -30,8 +30,6 @@ const EditContact = () => {
     return <NotFound />
   }
 
-  
-
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setContact({ ...contact, [event.target.name]: event.target.value });

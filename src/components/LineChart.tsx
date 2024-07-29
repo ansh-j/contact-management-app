@@ -6,6 +6,7 @@ import { Line } from 'react-chartjs-2'
 
 ChartJS.register( CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend)
 
+// charData coming from LineChartSetup component
 const LineChart = ({ chartData }: { chartData: ChartData<"line"> }) => {
   const options={
     responsive:true,
