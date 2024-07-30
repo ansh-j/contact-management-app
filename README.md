@@ -1,6 +1,6 @@
 #Description
 
-This project allows to create and save contact information using Redix. The saved contacts can be edited and delelted.
+This project allows to create and save contact information using Redux. The saved contacts can be edited and delelted.
 
 The chart page allows you to view the change in the number covid cases, the number of recovery cases and the number of deaths.
  The Api used for chart page is https://disease.sh/v3/covid-19/historical/all?lastdays=all . It returns an object of obecjts containing cases, recovery and death object along with the dates.
