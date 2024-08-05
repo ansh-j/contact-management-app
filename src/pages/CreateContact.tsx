@@ -19,6 +19,17 @@ const CreateContact = () => {
     status: ''
   })
 
+  const [placement,setPlacement] = useState<string>("left-[-500px]");
+
+  const handleClick=()=>{
+    setPlacement((prev:string)=>{
+      if(prev==='left-[-500px]')
+      {
+        return "left-0";
+      }
+      return "left-[-500px]"
+    })
+  }
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setContact({ ...contact, [event.target.name]: event.target.value });
@@ -37,12 +48,13 @@ const CreateContact = () => {
     <div className='h-screen scroll overflow-y-hidden'>
       <Header title="Contact Page" />
       <div className="flex h-full">
-        <div className='w-[25%]'>
-        <Sidebar />
+      <button className='absolute sm:hidden p-2  bg-emerald-300 rounded-lg top-[4.5rem] left-3' onClick={handleClick}>Menu</button>
+        <div className={`w-[25%]  max-sm:absolute max-sm:h-[90%] max-sm:w-[75%] max-sm:transition-all ease-in-out duration-700 bg-white ${placement}`}>
+        <Sidebar handlePlacement={handleClick}/>
 
         </div>
 
-        <div className='w-[75%] p-10 bg-[#FFF8F3] max-md:px-5 max-sm:px-3'>
+        <div className='w-[75%] p-10 bg-[#FFF8F3] max-md:px-5 max-sm:px-3 max-sm:w-full '>
           <div className='flex flex-col justify-center items-center gap-8 '>
             <h1 className='font-semibold text-xl'>Create Contact</h1>
 

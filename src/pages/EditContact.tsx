@@ -26,6 +26,17 @@ const EditContact = () => {
     status: values?.status
   })
 
+  const [placement,setPlacement] = useState<string>("left-[-500px]");
+
+  const handleClick=()=>{
+    setPlacement((prev:string)=>{
+      if(prev==='left-[-500px]')
+      {
+        return "left-0";
+      }
+      return "left-[-500px]"
+    })
+  }
   if (!values) {
     return <NotFound />
   }
@@ -49,12 +60,14 @@ const EditContact = () => {
     <div className='h-screen scroll overflow-y-hidden'>
       <Header title="Contact Page" />
       <div className="flex h-full">
-        <div className='w-[25%]'>
+      <button className='absolute sm:hidden p-2  bg-emerald-300 rounded-lg top-[4.5rem] left-3' onClick={handleClick}>Menu</button>
 
-          <Sidebar />
+        <div className={`w-[25%]  max-sm:absolute max-sm:h-[90%] max-sm:w-[75%] max-sm:transition-all ease-in-out duration-700 bg-white ${placement}`}>
+
+          <Sidebar handlePlacement={handleClick}/>
         </div>
 
-        <div className=' p-10 bg-[#FFF8F3] w-[75%] max-md:px-5 max-sm:px-3'>
+        <div className=' p-10 bg-[#FFF8F3] w-[75%] max-md:px-5 max-sm:px-3 max-sm:w-full'>
           <div className='flex flex-col justify-center items-center gap-8'>
             <h1 className='font-semibold text-xl'>Edit Contact</h1>
 
